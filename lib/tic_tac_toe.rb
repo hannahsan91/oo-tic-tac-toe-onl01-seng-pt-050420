@@ -1,7 +1,7 @@
 class TicTacToe
 
   def initalize(board)
-    @board = []
+    @board = board
   end
 
 WIN_COMBINATIONS = [
@@ -20,5 +20,6 @@ def display_board
 end
 
 def input_to_index
+  
 
 end
