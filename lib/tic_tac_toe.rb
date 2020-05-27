@@ -42,4 +42,15 @@ WIN_COMBINATIONS = [
 
   def valid_move?
     if (0..8).include?(index)
+      if @board[index] == " "
+        return true
+      else
+        return false
+      end
+    else
+      return false
+    end
+  end
+
+  def turn_count
 end
