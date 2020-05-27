@@ -40,5 +40,5 @@ WIN_COMBINATIONS = [
     end
   end
 
-  
+  def valid_move?
 end
