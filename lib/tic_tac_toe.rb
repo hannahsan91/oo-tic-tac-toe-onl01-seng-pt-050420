@@ -76,7 +76,16 @@ WIN_COMBINATIONS = [
     end
     count
 
+    def current_player
+      odd_or_even = turn_count
+      if odd_or_even.odd?
+        return "O"
+      else
+        return "X"
+      end
+    end
 
+    
 
 end
 
