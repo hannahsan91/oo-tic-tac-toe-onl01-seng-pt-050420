@@ -85,11 +85,71 @@ WIN_COMBINATIONS = [
       end
     end
 
-    
+    def won?
+     WIN_COMBINATIONS.each do |combo|
+     count = 0
+     initial_index = combo[0]
+     combo.each do |position|
+       if @board[position] == @board[initial_index]
+         count += 1 unless @board[initial_index] == " "
+        end
+     end
+      return combo if count == 3
+   end
+      return false
+    end
+    def full?
+        @board.each do |position|
+            if position == " "
+                return false
+            end
+        end
+        not_won = won?
+        return true
+    end
 
+    def draw?
+        @board.each do |position|
+            won_or_not_won = won?
+            if position == " " || won_or_not_won != false
+            return false
+            end
+        end
+        return true
+    end
+
+    def over?
+        is_won = won?
+        is_a_draw = draw?
+        if is_won != false || is_a_draw == true
+            return true
+        else
+            return false
+        end
+    end
+
+    def winner
+        winner_is_combo = won?
+        if winner_is_combo == false
+          return nil
+        else
+          winning_token = winner_is_combo[0]
+          @board[winning_token]
+        end
+    end
+
+   def play
+     until over?
+       turn
+     end
+     if won?
+       winner_of_game = winner
+       puts "Congratulations #{winner_of_game}!"
+     elsif draw?
+       puts "Cat's Game!"
+     end
+   end
 end
 
-
-
-
 end
+new_game = TicTacToe.new
