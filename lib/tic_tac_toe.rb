@@ -28,7 +28,7 @@ WIN_COMBINATIONS = [
     user_input_to_integer-1
   end
 
-  def move(index, player_token"X")
+  def move(index, player_token "X")
     @board[index] = player_token
   end
 
