@@ -43,6 +43,21 @@ class TicTacToe
     end
   end
 
+  def turn
+    puts "Choose a place on the board between 1 and 9"
+    user_choice = gets.chomp
+    user_index = input_to_index(user_choice)
+    valid_user_choice = valid_move?(user_index)
+    x_or_o = current_player
+    if valid_user_choice == true
+      move(user_index, x_or_o)
+      display_board
+    else
+      "Please choose again."
+      user_choice =  gets
+    end
+  end
+  
   def turn_count
     count = 0
     @board.each do |space|
@@ -59,21 +74,6 @@ class TicTacToe
       return "O"
     else
       return "X"
-    end
-  end
-
-  def turn
-    puts "Choose a place on the board between 1 and 9"
-    user_choice = gets.chomp
-    user_index = input_to_index(user_choice)
-    valid_user_choice = valid_move?(user_index)
-    x_or_o = current_player
-    if valid_user_choice == true
-      move(user_index, x_or_o)
-      display_board
-    else
-      "Please choose again."
-      user_choice =  gets
     end
   end
 
