@@ -29,5 +29,8 @@ WIN_COMBINATIONS = [
   end
 
   def move(index, player_token"X")
+    @board[index] = player_token
+  end
 
+  def position_taken?(index)
 end
