@@ -16,16 +16,16 @@ WIN_COMBINATIONS = [
 ]
 
   def display_board
-  puts " #{@board[0]} | #{@board[1]} | #{@board[2]}"
-  puts "-----------"
-  puts " #{@board[3]} | #{@board[4]} | #{@board[5]}"
-  puts "-----------"
-  puts " #{@board[6]} | #{@board[7]} | #{@board[8]}"
+    puts " #{@board[0]} | #{@board[1]} | #{@board[2]}"
+    puts "-----------"
+    puts " #{@board[3]} | #{@board[4]} | #{@board[5]}"
+    puts "-----------"
+    puts " #{@board[6]} | #{@board[7]} | #{@board[8]}"
   end
 
   def input_to_index(user_selection)
-  user_input_to_integer = user_selection.to_i
-  user_input_to_integer-1
+    user_input_to_integer = user_selection.to_i
+    user_input_to_integer-1
   end
 
 
