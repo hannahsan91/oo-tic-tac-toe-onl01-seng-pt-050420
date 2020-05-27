@@ -28,6 +28,6 @@ WIN_COMBINATIONS = [
     user_input_to_integer-1
   end
 
-  def move(index, token"X")
+  def move(index, player_token"X")
 
 end
