@@ -41,4 +41,5 @@ WIN_COMBINATIONS = [
   end
 
   def valid_move?
+    if (0..8).include?(index)
 end
